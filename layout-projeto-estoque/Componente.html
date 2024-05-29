@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Sistema ERP - mjailton</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale =1">		
+		<!--css-->
+		
+		<link rel="stylesheet" href="/resources/demos/style.css">
+		<link rel="stylesheet" href="js/datatables/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="js/datatables/css/responsive.dataTables.min.css">
+		<link rel="stylesheet" type="text/css" href="css/DataTables_boot.css">
+		<link rel="stylesheet" href="componentes/css/style_Componente.css">
+		<link rel="stylesheet" href="css/auxiliar.css">
+		<link rel="stylesheet" href="css/grade.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!--font icones-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	</head>
+	
+<body>
+<div class="col-12 central mb-3">
+<span class="p-2 bg-title text-light text-uppercase h5 mb-0 text-branco"><i class="fas fa-plus-circle"></i> Componentes</span>
+	<div class="p-2">
+	<div class="rows">
+		<div class="col-12">
+		<span class="d-block h4 border-bottom">Componentes modais</span>
+		<span class="d-block h6">Links</span>
+			<div class="rows">
+				<div class="col-4">
+					<a href="javascript:;" onclick="abrirModal('#carregar')">Gira gira com Modal </a> </br></br>
+					<a href="javascript:;" onclick="abrirModal('#mensagem')">Mensagem com modal</a> </br></br>
+					<a href="javascript:;" onclick="abrirModal('#formulario')">Formulário Modal </a> </br></br>
+					<a href="javascript:;" onclick="abrirModal('#notafiscal')">NOTA FISCAL ELETRÔNICA	</a> </br></br>
+					<a href="javascript:;" onclick="abrirModal('#opcao1')">Modal com 1 botão</a> </br></br>
+					<a href="javascript:;" onclick="abrirModal('#opcao2')">Modal com 2 botão</a> </br></br>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 mt-4">
+			<span class="d-block h4 border-bottom">Componentes mensagens estáticas</span>
+			<span class="msg msg-verde"><i class="fas fa-check"></i> <b>Parabéns!</b> cadastro realizado com sucesso <a href="" class="sair">x</a></span>
+			<span class="msg msg-vermelho"><i class="fas fa-bug"></i> <b>Ops!</b> ocorreu um erro no seu cadastro <a href="" class="sair">x</a></span>
+			<span class="msg msg-amarelo"><i class="fas fa-info-circle"></i> <b>Importante!</b> cadastro realizado com sucesso <a href="" class="sair">x</a></span>
+			<span class="msg msg-azul"><i class="fas fa-bullhorn"></i> <b>Aviso!</b> cadastro realizado com sucesso <a href="" class="sair">x</a></span>
+		</div>
+		<div class="col-12 mt-4">
+			<span class="msg msg-azul">
+				<i class="fas fa-bullhorn"></i> <b>Aviso!</b> mensagens com lista
+				<ul>
+					<li>Lista de mensagens</li>
+					<li>Lista de mensagens</li>
+					<li>Lista de mensagens</li>
+				</ul>
+				<a href="" class="sair">x</a>
+			
+			</span>
+			<span class="msg msg-verde">
+				<i class="fas fa-check"></i> <b>Parabéns!</b> mensagens com lista
+				<ul>
+					<li>Lista de mensagens</li>
+					<li>Lista de mensagens</li>
+					<li>Lista de mensagens</li>
+				</ul>
+				<a href="" class="sair">x</a>			
+			</span>
+			<span class="msg msg-amarelo">
+				<i class="fas fa-info-circle"></i> <b>Importante!</b> mensagens com lista
+				<ul>
+					<li>Lista de mensagens</li>
+					<li>Lista de mensagens</li>
+					<li>Lista de mensagens</li>
+				</ul>
+				<a href="" class="sair">x</a>			
+			</span>
+			<span class="msg msg-vermelho">
+				<i class="fas fa-bug"></i> <b>Ops!</b> mensagens com lista
+				<ul>
+					<li>Lista de mensagens</li>
+					<li>Lista de mensagens</li>
+					<li>Lista de mensagens</li>
+				</ul>
+				<a href="" class="sair">x</a>			
+			</span>
+		</div>
+		
+		<div class="col-12 my-4">
+			<span class="d-block h4 border-bottom">Componentes Carregamento estaticos</span>
+			<span class="d-inline-block mr-4"><img src="Componentes/img/load.gif" width="20"></span>
+			<span class="d-inline-block mx-4"><img src="Componentes/img/load.gif" width="30"></span>
+			<span class="d-inline-block mx-4"><img src="Componentes/img/load.gif" width="40"></span>
+			<span class="d-inline-block ml-4"><img src="Componentes/img/load.gif" width="60"></span>
+		</div>
+	</div> 
+	</div>
+	
+
+<!--Mensagens de alerta flutuante-->
+<!--mensagem de erro--><span class="msg msg-vermelho position-fixed left top"><i class="fas fa-bug"></i> <b>Ops!</b> ocorreu um erro no seu cadastro1 <a href="" class="sair">x</a></span>
+<!--mensagem de sucesso--><span class="msg msg-verde position-fixed right top"><i class="fas fa-check"></i> <b>Parabéns!</b> cadastro realizado com sucesso2 <a href="" class="sair">x</a></span>
+<!--mensagem de importabte--><span class="msg msg-amarelo position-fixed bottom left"><i class="fas fa-info-circle"></i> <b>Importante!</b> cadastro realizado com sucesso3 <a href="" class="sair">x</a></span>
+<!--mensagem de alerta ou aviso--><span class="msg msg-azul position-fixed bottom right"><i class="fas fa-bullhorn"></i> <b>Aviso!</b> cadastro realizado com sucesso4 <a href="" class="sair">x</a></span>
+
+
+
+<!--MODAL GIRA GIRA-->
+<div class="window load" id="carregar">
+	<span class="text-load">Carregando</span>
+</div>
+
+<!--MODAL MENSAGEM-->
+<div class="window msg msg-verde" id="mensagem">
+	<i class="fas fa-check"></i> <b>Parabéns!</b> cadastro realizado com sucesso <a href="" class="sair fechar">x</a>
+</div>
+
+<!--MODAL NOTA FISACAL ELETRONICA-->
+<div class="window medio" id="notafiscal">
+	<a href="" class="fechar mod">X</a>
+	<div class="p-2 px-4">
+			<span class="pt-4 d-block h3 border-bottom fw-700">Nota fiscal eletrônica</span>
+		<div class="rows">
+			<div class="col-12 mb-4"><span>Nota Nº 0000005 - Manoel jailton sousa</span></div>
+                 <div class="col-12 mb-3">
+                         <span class="text-label fw-700 h5 mb-1">Selecione o serviço desejado</span>
+                        <div class="width-100 border radius-4 d-flex center-middle">
+							<div class="check radio p-4 d-block width-50">
+								<label class="d-flex mb-1"><input type="checkbox" name="marcar" checked> Enviar nota fiscal por email</label>
+								<label class="d-flex mb-1"><input type="checkbox" name="marcar"> Lançar estoque</label>
+								<label class="d-flex"><input type="checkbox" name="marcar"> Lançar contas</label>
+							</div>
+							<span class="d-inline-block  width-50 text-center"><img src="Componentes/img/load.gif" width="70"></span>
+						</div>
+                 </div>
+				 <div class="col-12">
+					<span class="msg msg-verde d-block"><i class="fas fa-check"></i> <b>Parabéns!</b> cadastro realizado com sucesso2 <a href="" class="sair">x</a></span>
+					
+					<span class="msg msg-vermelho d-block"><i class="fas fa-bug"></i> <b>Ops!</b> ocorreu um erro no seu cadastro1 <a href="" class="sair">x</a></span>
+				 </div>
+                                
+         </div>
+		 <div class="tfooter border-0 between">
+			<div class="d-flex">
+				<input type="submit" name="" class="btn btn-verde border-bottom" value="Enviar nota fiscal">  
+				<input type="submit" name="" class="btn btn-azul border-bottom" value="botão 2">  
+				<input type="submit" name="" class="btn btn-azul border-bottom" value="botão 3">  
+		 </div>
+			<a href="" class="btn btn-vermelho fechar">Fechar</a>
+		 </div>
+	</div>
+</div>
+</div>
+
+
+<!--MODAL MENSAGEM-->
+<div class="window form" id="formulario">
+	<div class="p-2 px-4">
+	<a href="" class="fechar mod">X</a>
+	<span class="d-block h3 border-bottom fw-700">Componentes form</span>
+		<div class="rows">
+            	<div class="col-6 mb-3">
+                         <span class="text-label">Produto</span>
+                         <select class="form-campo" name="produto_id">
+                           	<option value=""></option>                                     
+                         </select>
+                 </div>
+                 <div class="col-4 mb-3">
+                         <span class="text-label">Categoria</span>
+                         <select class="form-campo" name="categoria_id">
+                           	<option value=""></option>                                   
+                         </select>
+                 </div>
+                 <div class="col-2 mb-3">
+                         <span class="text-label">Preço Venda</span>
+                         <input type="text" name="preco" placeholder="Digite aqui..." class="form-campo">
+                 </div>
+                 
+                 <div class="col-4 mb-3">
+                         <span class="text-label">Largura (cm)</span>
+                         <input type="text" name="largura" placeholder="Digite aqui..." class="form-campo">
+                 </div>
+                 <div class="col-2 mb-3">
+                         <span class="text-label">Altura(cm)</span>
+					<div class="radio">
+                         <label class="d-block"><input type="radio" name="marcar" checked> Marcar</label>
+                         <label class="d-block"><input type="radio" name="marcar"> Marcar</label>
+					</div>
+                 </div>
+                 <div class="col-6 mb-3">
+                         <span class="text-label">Peso Bruto</span>
+                        <div class="rows">
+							<div class="check col"><label><input type="checkbox" name="marcar"> <span>Marcar</span></label></div>
+							<div class="check col"><label><input type="checkbox" name="marcar"> <span>Marcar</span></label></div>
+							<div class="check col"><label><input type="checkbox" name="marcar"> <span>Marcar</span></label></div>
+							<div class="check col"><label><input type="checkbox" name="marcar"> <span>Marcar</span></label></div>
+						</div>
+                 </div>
+                                               
+                   
+                 <div class="col-3 mb-3">
+                         <span class="text-label">Destaque</span>
+                         <select class="form-campo" name="destaque">                                            
+                           	<option value="S">Sim</option>
+                           	<option value="N" selected>Não</option>                                          
+        			   </select>
+                 </div>
+                 <div class="col-3 mb-3">
+                         <span class="text-label">Controla Estoque </span>
+                         <select class="form-campo" name="controlar_estoque">                                            
+                           	<option value="S">Sim</option>
+                           	<option value="N">Não</option>
+                           
+        			   </select>
+                 </div>
+                  <div class="col-6 mb-3">
+                         <span class="text-label">imagem </span>
+                         <input type="file" name="" class="form-campo">
+                 </div>
+                    
+                 <div class="col-12 mb-3">
+                         <span class="text-label">Descrição</span>
+                         <textarea rows="10" cols="60" name="descricao" class="form-campo"></textarea>
+                 </div>
+         </div>
+		 <div class="tfooter end">
+			<a href="" class="btn btn-vermelho fechar">Fechar</a>
+			<input type="submit" name="" class="btn btn-azul border-bottom" value="Cadastrar">  
+		 </div>
+	</div>
+</div>
+
+
+<!--MODAL OPÇÃO	-->
+<div class="window menor" id="opcao1">
+	<span class="tmodal msg msg-verde"><i class="fas fa-check"></i> <b>Parabéns!</b></span>
+	<div class="p-3 text-center">
+		<p class="mb-3">Parabéns! Clique no botão abaixo para continuar</p>
+		<input type="submit" name="" class="btn btn-azul m-auto" value="Ok"> 
+	</div>
+	
+	<div class="tfooter end">
+		<a href="" class="btn btn-vermelho fechar">Fechar</a> 
+	</div>
+</div>
+
+<!--MODAL OPÇÃO	-->
+<div class="window menor" id="opcao2">
+	<span class="tmodal msg msg-vermelho text-branco"><i class="fas fa-trash"></i> <b>Excluir item</b></span>
+	<div class="p-3 text-center">
+		<p class="mb-3">Tem certeza que deseja excluir este item?</p>
+	</div>
+	
+	<div class="tfooter end">
+		<a href="" class="btn btn-vermelho fechar">Não</a> 
+		<a href="" class="btn btn-verde">Sim</a> 
+	</div>
+</div>
+
+<!--Fundo Preto-->
+<div id="fundo_preto"></div>
+
+ 
+</div>
+
+	<script src="js/jquery.min.js"></script>
+	
+	<script src="componentes/js/js_modal.js"></script>
+	<script src="componentes/js/js_util.js"></script>
+	<script src="js/js.js"></script>
+	
+	
+	<!-- Graphs -->
+    <script src="js/chart.js/Chart.min.js"></script>
+	<script src="js/funcao.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+	  $( function() {
+		$( "#tab" ).tabs();
+	  } );
+  </script>
+</body>
+	
+</html>
