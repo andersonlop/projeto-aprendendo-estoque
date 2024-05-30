@@ -37,8 +37,8 @@
                     <span> Cadastros </span>
                 </a>
                 <ul>
-                    <li><a href="<?php echo URL_BASE ?>">Clientes</a></li>
-                    <li><a href="<?php echo URL_BASE ?>">Produtos</a></li>
+                    <li><a href="<?php echo URL_BASE . "cliente" ?>">Clientes</a></li>
+                    <li><a href="<?php echo URL_BASE . "produto"?>">Produtos</a></li>
                 </ul>
             </li>
             <li class="side-nav-item sub">

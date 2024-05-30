@@ -21,15 +21,21 @@
     <?php include "cabecalho.php" ?>
     <?php include "menu.php" ?>
     <div class="base-meio">
-        <div class="rows">
-            <?php $this->load($view, $viewData); ?>
-        </div>
+        <?php $this->load($view, $viewData); ?>
     </div>
+
+    <?php 
+        $this->verErro();
+        $this->verMsg();
+    ?>
+
     <?php include "rodape.php" ?>
 
     <script src="<?php echo URL_BASE ?>assets/js/jquery.min.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/js/jquery.mask.js"></script>
     <script src="<?php echo URL_BASE ?>assets/componentes/js/js_util.js"></script>
-    <script src="<?php echo URL_BASE ?>ssets/omponentes/js/js_modal.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/componentes/js/js_modal.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/componentes/js/js_mascara.js"></script>
     <script src="<?php echo URL_BASE ?>assets/js/kit-awesome.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="<?php echo URL_BASE ?>assets/js/datatables/js/dataTables.responsive.min.js"></script>

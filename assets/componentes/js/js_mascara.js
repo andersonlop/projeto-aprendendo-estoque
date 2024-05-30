@@ -1,24 +1,24 @@
 $(function () {
-	 // MASK
+    // MASK
     var cellMaskBehavior = function (val) {
         return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
     },
-    cellOptions = {
-        onKeyPress: function(val, e, field, options) {
-            field.mask(cellMaskBehavior.apply({}, arguments), options);
-        }
-    };
+        cellOptions = {
+            onKeyPress: function (val, e, field, options) {
+                field.mask(cellMaskBehavior.apply({}, arguments), options);
+            }
+        };
 
     $('.mascara-celular').mask(cellMaskBehavior, cellOptions);
     $('.mascara-fone').mask('(00) 0000-0000');
     $(".mascara-data").mask('00/00/0000');
     $(".mascara-datetime").mask('00/00/0000 00:00');
-    $(".mascara-mes").mask('00/0000', {reverse: true});
-    $(".mascara-cpf").mask('000.000.000-00', {reverse: true});
-    $(".mascara-cnpj").mask('00.000.000/0000-00', {reverse: true});
-    $(".mascara-cep").mask('00000-000', {reverse: true});
-    $(".mascara-dinheiro").mask('R$ 000.000.000.000.000,00', {reverse: true, placeholder: "R$ 0,00"});
-	$(".mascara-float").mask('000.000.000.000.000,00', {reverse: true, placeholder: "0,00"});
+    $(".mascara-mes").mask('00/0000', { reverse: true });
+    $(".mascara-cpf").mask('000.000.000-00', { reverse: true });
+    $(".mascara-cnpj").mask('00.000.000/0000-00', { reverse: true });
+    $(".mascara-cep").mask('00000-000', { reverse: true });
+    $(".mascara-dinheiro").mask('R$ 000.000.000.000.000,00', { reverse: true, placeholder: "R$ 0,00" });
+    $(".mascara-float").mask('000.000.000.000.000,00', { reverse: true, placeholder: "0,00" });
 
     // SEARCH ZIPCODE
     $('.busca_cep').blur(function () {
@@ -37,7 +37,7 @@ $(function () {
             $(".bairro").val("");
             $(".cidade").val("");
             $(".estado").val("");
-$(".ibge").val("");
+            $(".ibge").val("");
 
             $.getJSON("https://viacep.com.br/ws/" + zip_code + "/json/?callback=?", function (data) {
                 if (!("erro" in data)) {
@@ -45,17 +45,17 @@ $(".ibge").val("");
                     $(".bairro").val(data.bairro);
                     $(".cidade").val(data.localidade);
                     $(".estado").val(data.uf);
-					$(".ibge").val(data.ibge);
+                    $(".ibge").val(data.ibge);
                 } else {
                     limpar();
                     alert("CEP não encontrado.");
                 }
             });
-        }else {
+        } else {
             limpar();
             alert("Formato de CEP inválido.");
         }
     });
 
-});	
+});
 
