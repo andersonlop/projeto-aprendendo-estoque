@@ -46,7 +46,7 @@
                     <div class="col-4 mb-3">
                         <span class="text-label">Nome</span>
                         <input type="hidden" name="id_produto" value="<?php echo $produto->id_produto ?? null?>">
-                        <input type="text" name="nome" id="nome" value="<?php echo $produto->nome ?? null?>"
+                        <input type="text" name="nome" required id="nome" value="<?php echo $produto->nome ?? null?>"
                             class="form-campo ">
                     </div>
                     <div class="col-4 mb-3 ">

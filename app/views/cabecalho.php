@@ -15,10 +15,10 @@
                     <li class="dropMenu">
                         <a href="#" class="base-avatar">
                             <span class="account-user-avatar">
-                                JH
+                                AS
                             </span>
                             <div class="ml-1">
-                                <p>Talras goes</p>
+                                <p>Anderson Siqueira</p>
                                 <small>Online</small>
                             </div>
                         </a>

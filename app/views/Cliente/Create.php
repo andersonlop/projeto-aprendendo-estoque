@@ -36,25 +36,25 @@
         <div class="rows">
             <div class="col-12 mb-3 ">
                 <span class="text-label">Nome cliente</span>
-                <input type="text" name="nome" id="nome" value="<?php echo $cliente->nome ?? null?>" class="form-campo"
-                    require>
+                <input type="text" name="nome" required id="nome" value="<?php echo $cliente->nome ?? null?>"
+                    class="form-campo">
             </div>
 
             <div class="col-3 mb-3">
                 <span class="text-label">Cep</span>
-                <input type="text" name="cep" id="cep" value="<?php echo $cliente->cep ?? null?>"
+                <input type="text" name="cep" required id="cep" value="<?php echo $cliente->cep ?? null?>"
                     class="form-campo mascara-cep busca_cep">
             </div>
 
             <div class="col-6 mb-3">
                 <span class="text-label">Logradouro</span>
-                <input type="text" name="endereco" id="endereco" value="<?php echo $cliente->endereco ?? null?>"
-                    class="form-campo rua">
+                <input type="text" name="endereco" required id="endereco"
+                    value="<?php echo $cliente->endereco ?? null?>" class="form-campo rua">
             </div>
 
             <div class="col-3 mb-3">
                 <span class="text-label">Número</span>
-                <input type="text" name="numero" id="numero" value="<?php echo $cliente->numero ?? null?>"
+                <input type="text" name="numero" required id="numero" value="<?php echo $cliente->numero ?? null?>"
                     class="form-campo">
             </div>
 
@@ -66,17 +66,17 @@
 
             <div class="col-4 mb-3">
                 <span class="text-label">Bairro</span>
-                <input type="text" name="bairro" id="bairro" value="<?php echo $cliente->bairro ?? null?>"
+                <input type="text" name="bairro" required id="bairro" value="<?php echo $cliente->bairro ?? null?>"
                     class="form-campo bairro">
             </div>
             <div class="col-4 mb-3">
                 <span class="text-label">UF</span>
-                <input type="text" name="uf" id="uf" value="<?php echo $cliente->uf ?? null?>"
+                <input type="text" name="uf" id="uf" required value="<?php echo $cliente->uf ?? null?>"
                     class="form-campo estado">
             </div>
             <div class="col-4 mb-3">
                 <span class="text-label">Cidade</span>
-                <input type="text" name="cidade" id="cidade" value="<?php echo $cliente->cidade ?? null?>"
+                <input type="text" name="cidade" required id="cidade" value="<?php echo $cliente->cidade ?? null?>"
                     class="form-campo cidade">
             </div>
             <div class="col-2 mb-3">
@@ -94,7 +94,7 @@
 
             <div class="col-3 mb-3">
                 <span class="text-label">CPF</span>
-                <input type="text" name="cpf" id="cpf" value="<?php echo $cliente->cpf ?? null?>"
+                <input type="text" name="cpf" required id="cpf" value="<?php echo $cliente->cpf ?? null?>"
                     class="form-campo mascara-cpf">
             </div>
 
@@ -106,7 +106,7 @@
 
             <div class="col-8 mb-3">
                 <span class="text-label">Email</span>
-                <input type="email" name="email" id="email" value="<?php echo $cliente->email ?? null?>"
+                <input type="email" name="email" required id="email" value="<?php echo $cliente->email ?? null?>"
                     class="form-campo" require>
             </div>
 
