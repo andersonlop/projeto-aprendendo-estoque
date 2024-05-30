@@ -15,6 +15,11 @@
     <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE ?>assets/css/grade.css">
     <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE ?>assets/css/auxiliar.css">
     <link rel="stylesheet" type="text/css" href="<?php echo URL_BASE ?>assets/css/m-style.css">
+
+    <script>
+    var base_url = "<?php echo URL_BASE ?>";
+    </script>
+
 </head>
 
 <body class="backoffice">
@@ -29,8 +34,6 @@
         $this->verMsg();
     ?>
 
-    <?php include "rodape.php" ?>
-
     <script src="<?php echo URL_BASE ?>assets/js/jquery.min.js"></script>
     <script src="<?php echo URL_BASE ?>assets/js/jquery.mask.js"></script>
     <script src="<?php echo URL_BASE ?>assets/componentes/js/js_util.js"></script>
@@ -40,6 +43,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="<?php echo URL_BASE ?>assets/js/datatables/js/dataTables.responsive.min.js"></script>
     <script src="<?php echo URL_BASE ?>assets/js/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="<?php echo URL_BASE ?>assets/componentes/js/js_data_table.js"></script>
 
     <!-- Graphs -->
     <script src="<?php echo URL_BASE ?>assets/js/chart.js/Chart.min.js"></script>

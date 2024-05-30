@@ -12,11 +12,11 @@
                           
                 if ($cliente->id_cliente ?? null) 
                     {
-                        echo "Editar clientes";
+                        echo "Editar cliente";
                     } 
                     else 
                     {
-                        echo "Cadastrar clientes";
+                        echo "Cadastrar cliente";
                     }
                 ?>
 

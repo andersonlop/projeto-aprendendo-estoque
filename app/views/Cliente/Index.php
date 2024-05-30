@@ -45,7 +45,7 @@
 
     <div class="rows">
         <div class="col-12 mb-3">
-            <table id="" width="100%" border="0" cellpadding="0" cellspacing="0" class="table border radius-4">
+            <table id="dataTable" width="100%" border="0" cellpadding="0" cellspacing="0" class="table border radius-4">
                 <thead>
                     <tr>
                         <th align="center">Id</th>
@@ -74,7 +74,7 @@
                                 </svg>
                             </a>
                             <a href="javascript:;" onclick="excluir(this)" data-entidade="cliente"
-                                data-id="<?php echo $l->id_cliente?>" class="ml-2" title="Excuir">
+                                data-id="<?php echo $l->id_cliente?>" class="ml-2" title="Excluir">
                                 <svg width="16" height="19" viewBox="0 0 16 19" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -89,7 +89,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-12">
+        <!-- <div class="col-12">
             <div class="paginacao justify-content-end">
                 <ul>
                     <li>
@@ -117,6 +117,6 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

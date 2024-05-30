@@ -60,7 +60,12 @@ class ClienteController extends Controller{
             $this->redirect(URL_BASE . "cliente/create");
          }        
        }          
-    }    
+    } 
+    
+    public function excluir($id_cliente) {
+        Service::excluir("cliente", "id_cliente", $id_cliente);
+        $this->redirect(URL_BASE . "cliente");
+    }
     
  }
 ?>
