@@ -32,10 +32,15 @@ class ProdutoController extends Controller{
         $obj->id_produto      = $_POST["id_produto"] ? $_POST["id_produto"] : null;
         $obj->nome            = $_POST["nome"];
         $obj->preco           = $_POST["preco"];
-        $obj->estoque_inicial = $_POST["estoque_inicial"];
-        $obj->estoque_atual   = $_POST["estoque_atual"];
+
+        if($obj->id_produto == null){
+            $obj->estoque_inicial = $_POST["estoque_inicial"]; 
+        }  
+
         $obj->estoque_minimo  = $_POST["estoque_minimo"];
-        $obj->estoque_maximo  = $_POST["estoque_maximo"];       
+        $obj->estoque_maximo  = $_POST["estoque_maximo"]; 
+        
+      //  i($obj);
 
        Flash::setForm($obj); 
        $resultado = ProdutoService::salvar($obj, "id_produto", "produto");

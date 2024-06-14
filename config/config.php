@@ -2,7 +2,7 @@
 define("ROTA_MANUAL",false);
 
 define("SERVIDOR", "localhost");
-define("BANCO", "aprendendo_estoque");
+define("BANCO", "aprendendo_estoque2");
 define("USUARIO", "root");
 define("SENHA", "");
 define("CHARSET","UTF8");
@@ -15,8 +15,9 @@ define('TIMEZONE',"America/Fortaleza");
 define('CAMINHO'            , realpath('./'));
 define("TITULO_SITE","Aprendendo Estoque");
 
-//define('URL_BASE', 'http://' . $_SERVER["HTTP_HOST"].'/metodoagora/mjapi');
-define('URL_BASE', '/cursos/mjailton/projeto-aprendendo-estoque/');
+//define('URL_BASE', 'https://' . $_SERVER["HTTP_HOST"].'/projeto-aprendendo-estoque/');
+define('URL_BASE', 'http://' . $_SERVER["HTTP_HOST"].'/cursos/projeto-aprendendo-estoque/');
+//define('URL_BASE', '/cursos/mjailton/projeto-aprendendo-estoque/');
 //define('URL_IMAGEM', "http://". $_SERVER['HTTP_HOST'] . "/estrutura_mvc/UP/");
 
 define("SESSION_LOGIN","usuario_logado");

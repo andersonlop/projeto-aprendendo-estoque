@@ -22,7 +22,7 @@ class ClienteController extends Controller{
     } 
 
     public function edit($id_cliente){  
-        $dados["cliente"] =  Service::get("cliente", "id_cliente",$id_cliente);      
+        $dados["cliente"] =  Service::get("cliente", "id_cliente", $id_cliente);      
         $dados["view"]    = "Cliente/Create";
         $this->load("template", $dados);
     } 

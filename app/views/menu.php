@@ -53,8 +53,8 @@
                     <span> Estoque</span>
                 </a>
                 <ul>
-                    <li><a href="<?php echo URL_BASE ?>">Entrada de produto</a></li>
-                    <li><a href="<?php echo URL_BASE ?>">Saída de produto</a></li>
+                    <li><a href="<?php echo URL_BASE . "entrada" ?>">Entrada de Produto</a></li>
+                    <li><a href="<?php echo URL_BASE . "saida" ?>">Saída de Produto</a></li>
                 </ul>
             </li>
 

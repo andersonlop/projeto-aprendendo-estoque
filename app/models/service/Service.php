@@ -110,7 +110,7 @@ class Service{
         $dao = new Dao();
         $excluir = $dao->excluir($tabela, $campo, $valor);
         if($excluir){
-            Flash::setMsg("Registro Exluído com Sucesso !");
+            Flash::setMsg("Registro Excluído com Sucesso !");
         }else{
             Flash::setMsg("Não foi possível excluir o registro",-1);
         }        
@@ -124,4 +124,3 @@ class Service{
     
    
 }
-

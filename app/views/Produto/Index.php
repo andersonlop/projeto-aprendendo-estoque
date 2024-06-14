@@ -7,7 +7,9 @@
                     stroke="#44B1D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
 
-            <p class="ml-1">Lista de produtos</p>
+            <p class="ml-1">
+                <a href="<?php echo URL_BASE . "produto"?>">Lista de Produtos</a>
+            </p>
         </div>
         <div class="d-flex">
             <a href="#" class="filtro mr-2 btn btn-azul2 d-flex align-items-center px-3" tite="Voltar">
@@ -43,35 +45,37 @@
             <form action="<?php echo URL_BASE . "produto/salvar"?>" method="post">
                 <div class="rows  align-items-center">
 
-                    <div class="col-4 mb-3">
+                    <div class="col-6 mb-3">
                         <span class="text-label">Nome</span>
                         <input type="hidden" name="id_produto" value="<?php echo $produto->id_produto ?? null?>">
                         <input type="text" name="nome" required id="nome" value="<?php echo $produto->nome ?? null?>"
                             class="form-campo ">
                     </div>
-                    <div class="col-4 mb-3 ">
-                        <span class="text-label">Preco</span>
+                    <div class="col-6 mb-3 ">
+                        <span class="text-label">Preço</span>
                         <input type="text" name="preco" required id="preco" value="<?php echo $produto->preco ?? null?>"
                             class="form-campo">
                     </div>
 
+                    <?php if($produto->id_produto ?? null){?>
+                    <div class="col-4 mb-3 ">
+                        <span class="text-label">Estoque Inicial</span>
+                        <input type="text" name="estoque_inicial" required id="estoque_inicial"
+                            value="<?php echo $produto->estoque_inicial ?? null?> " class="form-campo" disabled>
+
+                    </div>
+                    <?php } else{?>
                     <div class="col-4 mb-3 ">
                         <span class="text-label">Estoque Inicial</span>
                         <input type="text" name="estoque_inicial" required id="estoque_inicial"
                             value="<?php echo $produto->estoque_inicial ?? null?>" class="form-campo">
                     </div>
+                    <?php }?>
 
                     <div class="col-4 mb-3 ">
                         <span class="text-label">Estoque Mínimo</span>
                         <input type="text" name="estoque_minimo" required id="estoque_minimo"
                             value="<?php echo $produto->estoque_minimo ?? null?>" class="form-campo">
-                    </div>
-
-
-                    <div class="col-4 mb-3 ">
-                        <span class="text-label">Estoque Atual</span>
-                        <input type="text" name="estoque_atual" required id="estoque_atual"
-                            value="<?php echo $produto->estoque_atual ?? null?>" class="form-campo">
                     </div>
 
                     <div class="col-4 mb-3 ">
