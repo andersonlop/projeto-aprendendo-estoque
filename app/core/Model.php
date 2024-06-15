@@ -80,6 +80,122 @@ abstract class Model{
         }
     }    
     
+    function findPlus($conn, $tabela, $condicoes = [], $campos = '*', $isLista = false) {
+        try {
+            // Definir tabela
+            $tabela = ($tabela) ? $tabela : $this->tabela;
+    
+            // Montar a string das condições
+            $condicoesStr = '';
+            $valores = [];
+            foreach ($condicoes as $campo => $valor) {
+                $paramName = str_replace('.', '_', $campo);
+                $condicoesStr .= ($condicoesStr ? ' AND ' : '') . "$campo = :$paramName";
+                $valores[":$paramName"] = $valor;
+            }
+    
+            // Montar a string dos campos selecionados
+            if (is_array($campos)) {
+                $camposStr = implode(', ', $campos);
+            } else {
+                $camposStr = $campos;
+            }
+    
+            // Montar a consulta SQL
+            $sql = "SELECT $camposStr FROM $tabela";
+            if ($condicoesStr) {
+                $sql .= " WHERE $condicoesStr";
+            }
+    
+            // Preparar a consulta
+            $stmt = $conn->prepare($sql);
+    
+            // Vincular os valores das condições
+            foreach ($valores as $campo => $valor) {
+                $stmt->bindValue($campo, $valor);
+            }
+    
+            // Executar a consulta
+            $stmt->execute();
+    
+            // Retornar o resultado
+            if ($isLista) {
+                return $stmt->fetchAll(\PDO::FETCH_OBJ);
+            } else {
+                return $stmt->fetch(\PDO::FETCH_OBJ);
+            }
+        } catch (\PDOException $e) {
+            throw new \Exception($e->getMessage());
+        }
+    }
+    
+    
+    function findRel($conn, $tabelas, $condicoes = [], $campos = '*', $isLista = true) {
+        try {
+            // Montar a lista de tabelas
+            $tabelasStr = implode(', ', $tabelas);
+    
+            // Separar a condição de junção
+            $joinCampo = isset($condicoes['joinCampo']) ? $condicoes['joinCampo'] : null;
+            if ($joinCampo) {
+                unset($condicoes['joinCampo']); // Remover 'joinCampo' das condições
+            }
+    
+            // Montar a string da condição de junção
+            $joinCondicao = $joinCampo ? "{$tabelas[0]}.$joinCampo = {$tabelas[1]}.$joinCampo" : '';
+    
+            // Montar a string das condições
+            $condicoesStr = '';
+            $valores = [];
+            foreach ($condicoes as $campo => $valor) {
+                if ($campo !== 'joinCampo') {
+                    $paramName = str_replace('.', '_', $campo);
+                    $condicoesStr .= ($condicoesStr ? ' AND ' : '') . "$campo = :$paramName";
+                    $valores[":$paramName"] = $valor;
+                }
+            }
+    
+            // Montar a string dos campos selecionados
+            if (is_array($campos)) {
+                $camposStr = implode(', ', $campos);
+            } else {
+                $camposStr = $campos;
+            }
+    
+            // Montar a consulta SQL
+            $sql = "SELECT $camposStr FROM $tabelasStr";
+            if ($joinCondicao) {
+                $sql .= " WHERE $joinCondicao";
+                if ($condicoesStr) {
+                    $sql .= " AND $condicoesStr";
+                }
+            } elseif ($condicoesStr) {
+                $sql .= " WHERE $condicoesStr";
+            }
+    
+            // Preparar a consulta
+            $stmt = $conn->prepare($sql);
+    
+            // Vincular os valores das condições
+            foreach ($valores as $campo => $valor) {
+                $stmt->bindValue($campo, $valor);
+            }
+    
+            // Executar a consulta
+            $stmt->execute();
+    
+            // Retornar o resultado
+            if ($isLista) {
+                return $stmt->fetchAll(\PDO::FETCH_OBJ);
+            } else {
+                return $stmt->fetch(\PDO::FETCH_OBJ);
+            }
+        } catch (\PDOException $e) {
+            throw new \Exception($e->getMessage());
+        }
+    }
+
+
     //Retorna uma consulta por um campo
     function findGeral($conn, $campo, $operador, $valor, $tabela=null, $isLista=false ){
         $tabela = ($tabela) ? $tabela: $this->tabela;

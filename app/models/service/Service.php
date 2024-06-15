@@ -12,6 +12,15 @@ class Service{
         $dao = new Dao();
         return  $dao->get($tabela, $campo, $valor,$eh_lista);
     }  
+    public static  function getPlus($tabela, $condicoes = [], $campos = '*', $isLista = false){
+        $dao = new Dao();
+        return  $dao->getPlus($tabela,  $condicoes, $campos, $isLista);
+    }     
+
+    public static  function getRel( $tabelas, $condicoes, $campos = '*', $isLista = true){
+        $dao = new Dao();
+        return  $dao->getRel( $tabelas, $condicoes, $campos , $isLista );
+    }
     public static  function getEntre($tabela, $campo, $valor1, $valor2){
         $dao = new Dao();
         return  $dao->getEntre($tabela, $campo, $valor1, $valor2);
@@ -110,7 +119,7 @@ class Service{
         $dao = new Dao();
         $excluir = $dao->excluir($tabela, $campo, $valor);
         if($excluir){
-            Flash::setMsg("Registro Excluído com Sucesso !");
+            Flash::setMsg("Registro Exluído com Sucesso !");
         }else{
             Flash::setMsg("Não foi possível excluir o registro",-1);
         }        
@@ -124,3 +133,4 @@ class Service{
     
    
 }
+

@@ -89,3 +89,4 @@ class Seeder
         Service::limparTabela($tabela);
     }
 }
+

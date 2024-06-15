@@ -105,6 +105,7 @@
                             <th align="center">Estoque Mínimo</th>
                             <th align="center">Estoque Atual</th>
                             <th align="center">Estoque Máximo</th>
+                            <th align="center">Data Última Alteração</th>
                             <th align="center">Ação</th>
                         </tr>
                     </thead>
@@ -118,6 +119,11 @@
                             <td align="center"><?php echo $l->estoque_minimo ?></td>
                             <td align="center"><?php echo $l->estoque_atual ?></td>
                             <td align="center"><?php echo $l->estoque_maximo ?></td>
+                            <?php if($l->dtah_ultalt !== null){?>
+                            <td align="center"><?php echo $l->dtah_ultalt ?></td>
+                            <?php } else {?>
+                            <td align="center"><?php echo "Produto ainda não atualizado" ?></td>
+                            <?php }?>
                             <td align="center">
                                 <a href="<?php echo URL_BASE . "produto/edit/" . $l->id_produto ?>" class="mx-1"
                                     title="Editar">
