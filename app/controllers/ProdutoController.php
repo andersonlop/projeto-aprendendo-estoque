@@ -3,6 +3,7 @@ namespace app\controllers;
 use app\core\Controller;
 use app\core\Flash;
 use app\models\service\ProdutoService;
+use app\models\service\MovimentoService;
 use app\models\service\Service;
 use stdClass;
 
@@ -44,6 +45,15 @@ class ProdutoController extends Controller{
 
        Flash::setForm($obj); 
        $resultado = ProdutoService::salvar($obj, "id_produto", "produto");
+
+    //    if($resultado){
+    //     $mov = new stdClass;
+    //     $mov->id_produto      = $obj->id_produto;        
+    //     $mov->tipo_movimento  = "Estoque Inicial";           
+    //     $mov->qtde_movimento  = $obj->estoque_inicial;
+    //     $mov->entr_sai        = "I";
+    //     MovimentoService::inserir($mov);     
+    //     }
 
        if($resultado){
          $this->redirect(URL_BASE . "produto");

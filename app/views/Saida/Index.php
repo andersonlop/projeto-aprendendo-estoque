@@ -94,15 +94,14 @@
                     </thead>
                     <tbody>
                         <?php foreach($lista as $l){?>
-                        <?php $date = new DateTimeImmutable($l->data_saida);?>
                         <tr>
                             <td align="center"><?php echo $l->id_saida ?> </td>
-                            <td align="center"><?php echo $date->format('d/m/Y'); ?> </td>
+                            <td align="center"><?php echo databr($l->data_saida)?> </td>
                             <td align="center"><?php echo $l->hora_saida?> </td>
                             <td align="center"><?php echo $l->nome ?> </td>
                             <td align="center"><?php echo $l->qtde_saida ?> </td>
-                            <td align="center"><?php echo $l->valor_saida ?></td>
-                            <td align="center"><?php echo $l->subtotal_saida ?> </td>
+                            <td align="center">R$ <?php echo moedaBr($l->valor_saida) ?></td>
+                            <td align="center">R$ <?php echo moedaBr($l->subtotal_saida) ?> </td>
                         </tr>
                         <?php }?>
 
